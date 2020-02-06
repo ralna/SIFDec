@@ -28,9 +28,9 @@ while [ $CORRECT_PLATFORM == "false" ]; do
    echo '   (4) IBM PowerPC'
    echo '   (5) PC'
    echo '   (6) PC with generic 64-bit processor'
-   echo '   (7) PC with 64-bit Itanium processor'
-   echo '   (8) PC with 64-bit Opteron processor'
-   echo '   (9) PC with 64-bit Athlon processor'
+   echo '   (7) Linux PC with 64-bit Itanium processor'
+   echo '   (8) Linux PC with 64-bit Opteron processor'
+   echo '   (9) Linux PC with 64-bit Athlon processor'
    echo '  (10) SGI workstation'
    echo '  (11) SUN workstation'
    echo '  (12) MAC OS/X'
@@ -154,6 +154,7 @@ while [ $CORRECT_PLATFORM == "false" ]; do
                echo -e ' Select operating system\n'
                echo '   (1) Windows 2000/XP with MinGW/Msys'
                echo '   (2) Linux'
+               echo '   (3) FreeBSD'
 
                read CHOICE
 
@@ -168,8 +169,13 @@ while [ $CORRECT_PLATFORM == "false" ]; do
                   export OS="lnx"
                   export OPSYS="Linux"
 ;;
+               3)
+                  CORRECT_OS="true"
+                  export OS="bsd"
+                  export OPSYS="FreeBSD"
+;;
                *)
-                  echo ' Please give an integer between 1 and 2'
+                  echo ' Please give an integer between 1 and 3'
                esac
             done
 ;;
@@ -184,6 +190,7 @@ while [ $CORRECT_PLATFORM == "false" ]; do
                echo -e ' Select operating system\n'
                echo '   (1) Windows 2000/XP with MinGW/Msys'
                echo '   (2) Linux'
+               echo '   (3) FreeBSD'
 
                read CHOICE
 
@@ -198,8 +205,13 @@ while [ $CORRECT_PLATFORM == "false" ]; do
                   export OS="lnx"
                   export OPSYS="Linux"
 ;;
+               3)
+                  CORRECT_OS="true"
+                  export OS="bsd"
+                  export OPSYS="FreeBSD"
+;;
                *)
-                  echo ' Please give an integer between 1 and 2'
+                  echo ' Please give an integer between 1 and 3'
                esac
             done
 ;;
