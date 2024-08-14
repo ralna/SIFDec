@@ -43,7 +43,7 @@
       INTEGER :: show_params = 0
       INTEGER :: force = 0
       CHARACTER ( LEN = len_param ) :: param_list = REPEAT( ' ', len_param )
-      CHARACTER ( LEN = 20 ) :: sifname = REPEAT( ' ', 20 )
+      CHARACTER ( LEN = 150 ) :: sifname = REPEAT( ' ', 150 )
 
 !  read and process command-line options
 
